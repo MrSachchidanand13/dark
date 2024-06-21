@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Area Calc</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Dark Area Calculator</h1>
+    <img id="live_img" src="{{ url_for('video_feed') }}" alt="Live Camera Feed">
+
+    <h2>Change Contour Color</h2>
+    <form id="color_form">
+        <label for="red_range">Red:</label>
+        <input type="range" id="red_range" name="red_range" min="0" max="255" value="0"><br>
+        <label for="green_range">Green:</label>
+        <input type="range" id="green_range" name="green_range" min="0" max="255" value="0"><br>
+        <label for="blue_range">Blue:</label>
+        <input type="range" id="blue_range" name="blue_range" min="0" max="255" value="255"><br>
+    </form>
+
+    <script>
+        const form = document.getElementById('color_form');
+        form.addEventListener('input', function() {
+            const r = document.getElementById('red_range').value;
+            const g = document.getElementById('green_range').value;
+            const b = document.getElementById('blue_range').value;
+            fetch(`/change_color/${r}/${g}/${b}`)
+                .then(response => response.text())
+                .then(data => console.log(data));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Reset default styles */
+body {
+    font-family: 'Minecraft', Arial, sans-serif; /* Apply custom font 'Minecraft' */
+    background: linear-gradient(to bottom right, #4CAF50, #FFC107, #1976D2); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 110vh; /* Increased height to 110vh */
+    color: #fff; /* White text color */
+    text-align: center; /* Center align text */
+    background-size: cover; /* Ensure background covers entire viewport */
+}
+
+h1 {
+    margin-top: 50px; /* Add padding for top heading */
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Larger font size for heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+    text-decoration: underline; /* Underline text */
+}
+
+#live_img {
+    width: 80%; /* Adjust width as needed */
+    max-width: 640px; /* Limit maximum width */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem; /* Larger font size for subheading */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="range"] {
+    width: 80%; /* Adjust width as needed */
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 60px; /* Adjust width as needed */
+    text-align: right;
+    margin-right: 10px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default styles */
+    appearance: none;
+    background-color: #ddd; /* Light gray background */
+    height: 8px; /* Height of the range input */
+    border-radius: 5px;
+}
+
+input[type="range"]:focus {
+    outline: none; /* Remove focus outline */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styles */
+    appearance: none;
+    width: 16px; /* Width of the thumb */
+    height: 16px; /* Height of the thumb */
+    background-color: #007bff; /* Blue thumb color */
+    border-radius: 50%; /* Rounded thumb */
+    cursor: pointer; /* Pointer cursor */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 16px; /* Width of the thumb */
+    height: 16px; /* Height of the thumb */
+    background-color: #007bff; /* Blue thumb color */
+    border-radius: 50%; /* Rounded thumb */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Define custom font 'Minecraft' */
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../static/fonts/mine.otf') format('opentype'); /* Path to your mine.otf font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply custom font to all elements */
+body, h1, h2, form, label, input {
+    font-family: 'Minecraft', Arial, sans-serif;
+}
