@@ -1,3 +1,3 @@
 Flask==1.1.4
 numpy==1.19.5
-opencv-python==3.4.15.69
+opencv-python==3.4.16.59
