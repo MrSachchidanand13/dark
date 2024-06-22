@@ -26,7 +26,6 @@ numpy==2.0.0
 opencv-python==4.10.0.84
 packaging==24.1
 pefile==2023.2.7
-py2exe==0.13.0.1
 pycparser==2.22
 pygame-ce==2.5.0
 pyinstaller @ https://github.com/pyinstaller/pyinstaller/archive/develop.tar.gz#sha256=07beec9876eaa15f9e611ef6403988c5fe11f513876fbd2040d0c613c1783f13
