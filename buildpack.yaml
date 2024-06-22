@@ -1,0 +1,4 @@
+_buildpacks:
+  - buildpack: gcr.io/paketo-buildpacks/python
+  - buildpack: gcr.io/paketo-buildpacks/procfile
+  - buildpack: gcr.io/paketo-buildpacks/apt
